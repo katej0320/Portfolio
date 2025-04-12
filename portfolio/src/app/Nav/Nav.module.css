@@ -1,0 +1,68 @@
+.navbar {
+  background-color: transparent;
+  padding: 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 20px;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin: 0;
+  padding: 0;
+  font-size: 40px;
+  margin-right: 50px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+  font-family: 'MadeInfinityOutline';
+  font-weight: 700;
+}
+
+.item {
+  cursor: pointer;
+  color: var(--warmbrown);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.item:hover {
+  opacity: 0.7;
+}
+
+.active::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: var(--burntclay);
+  bottom: -4px;
+  left: 0;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: transparent;
+  display: none;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-top: 0.5rem;
+}
+
+.dropdown:hover .dropdownMenu {
+  display: flex;
+}
